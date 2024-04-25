@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -11,15 +12,15 @@ import java.util.*;
 public class Parser {
     public static List<Country> countries = new ArrayList<>();
 
-    public List<Country> sortByName(){
+    public static List<Country> sortByName() {
         List<Country> sortedByName = new ArrayList<>(countries);
         // Sort countries alphabetically (least)
         sortedByName.sort(Comparator.comparing(Country::getName));
 
-        return  sortedByName;
+        return sortedByName;
     }
 
-    public List<Country> sortByPopulation(){
+    public static List<Country> sortByPopulation() {
         List<Country> sortedByPopulation = new ArrayList<>(countries);
         // Sort countries by population (most)
         sortedByPopulation.sort(Comparator.comparing(Country::getPopulation).reversed());
@@ -27,7 +28,7 @@ public class Parser {
         return sortedByPopulation;
     }
 
-    public List<Country> sortByArea(){
+    public static List<Country> sortByArea() {
         List<Country> sortedByArea = new ArrayList<>(countries);
         // Sort countries by area (most)
         sortedByArea.sort(Comparator.comparing(Country::getArea).reversed());
@@ -45,7 +46,7 @@ public class Parser {
         Elements countryClass = doc.select("div.country");
 
         // Iterate through each country div to extract country data\
-        for (Element country: countryClass){
+        for (Element country : countryClass) {
             String name = country.select(".country-name").first().ownText();
             String capital = country.select(".country-info").select("span.country-capital").first().ownText();
             int population = Integer.parseInt(country.select(".country-info").select("span.country-population").first().ownText());

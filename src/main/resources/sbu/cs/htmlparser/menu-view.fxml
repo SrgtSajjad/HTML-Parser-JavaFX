@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.htmlparser.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.htmlparser.MenuController">
    <children>
       <ImageView fitHeight="410.0" fitWidth="749.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,17 +19,17 @@
             <Font size="50.0" />
          </font>
       </Label>
-      <Button fx:id="nameButton" layoutX="144.0" layoutY="228.0" mnemonicParsing="false" text="Sort By Name">
+      <Button fx:id="nameButton" layoutX="144.0" layoutY="228.0" mnemonicParsing="false" onAction="#displaySortedByName" text="Sort By Name">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="populationButton" layoutX="123.0" layoutY="291.0" mnemonicParsing="false" text="Sort By Population">
+      <Button fx:id="populationButton" layoutX="123.0" layoutY="291.0" mnemonicParsing="false" onAction="#displaySortedByPopulation" text="Sort By Population">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="areaButton" layoutX="150.0" layoutY="160.0" mnemonicParsing="false" text="Sort By Area">
+      <Button fx:id="areaButton" layoutX="150.0" layoutY="160.0" mnemonicParsing="false" onAction="#displaySortedByArea" text="Sort By Area">
          <font>
             <Font size="20.0" />
          </font>
