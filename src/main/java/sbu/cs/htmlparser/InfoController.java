@@ -36,8 +36,7 @@ public class InfoController {
         stage.setResizable(false);
     }
 
-    @FXML
-    private void setCountry(ActionEvent event) {
+    public void setCountry() {
         countryName.setText(country.getName());
         countryCapital.setText(country.getCapital());
         countryArea.setText("" + country.getArea());

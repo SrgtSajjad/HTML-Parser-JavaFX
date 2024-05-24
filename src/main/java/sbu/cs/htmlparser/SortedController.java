@@ -61,7 +61,10 @@ public class SortedController implements Initializable {
                 }
 
                 try {
-                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/sbu/cs/htmlparser/info-view.fxml")));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/sbu/cs/htmlparser/info-view.fxml"));
+                    Parent root = loader.load();
+                    InfoController infoController = loader.getController();
+                    infoController.setCountry();
                     Stage stage = (Stage) myList.getScene().getWindow();
                     Scene scene = new Scene(root);
                     stage.setScene(scene);

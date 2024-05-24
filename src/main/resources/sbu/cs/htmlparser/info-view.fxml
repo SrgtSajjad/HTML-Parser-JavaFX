@@ -72,6 +72,5 @@
          </children>
       </GridPane>
       <Button layoutX="646.0" layoutY="448.0" mnemonicParsing="false" onAction="#returnButtonClick" text="Return" />
-      <Button layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#setCountry" text="Refresh" />
    </children>
 </AnchorPane>
